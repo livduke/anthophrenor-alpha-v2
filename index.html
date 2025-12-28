@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthophrenor Alpha</title>
+    <link rel="icon" href="data:,">
+    <style>
+        body, html { 
+            margin: 0; 
+            overflow: hidden;
+            background-color: #000;
+        }
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            opacity: 100;
+            pointer-events: none; 
+        }
+
+        .warning {
+            text-shadow: 0px 0px 15px rgb(17, 13, 85, 1),
+            0px 0px 20px rgb(17, 13, 85, 1),
+            0px 0px 30px rgb(17, 13, 85, 1);
+            font-size: 18px; 
+            line-height: 1.5; 
+            max-width: 80%; 
+            margin: 20px auto; 
+        }
+        #menu {
+            text-shadow: 0px 0px 15px rgb(17, 13, 85, 1),
+            0px 0px 20px rgb(17, 13, 85, 1),
+            0px 0px 30px rgb(17, 13, 85, 1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            z-index: 10;
+        }
+
+        #button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; 
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        #logo {
+            width: 8000px; 
+            max-width: 100%; 
+            height: auto; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.8; 
+            z-index: -1;
+            pointer-events: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+        }
+
+        #credits-section, #info-section {
+            text-shadow: 0px 0px 15px #110d55,
+                    0px 0px 20px rgb(17, 13, 85, 1),
+                    0px 0px 30px rgb(17, 13, 85, 1);
+            display: none;
+            font-size: 16px;
+            color: white;
+            position: absolute; 
+            left: 50%;
+            top: 100%; 
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        #bottom-text {
+           position: fixed;
+            bottom: 10px; 
+            left: 50%;
+            transform: translateX(-50%); 
+            color: white; 
+            font-size: 20px; 
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            background: transparent; 
+            padding: 5px 15px;
+            border-radius: 5px;
+            z-index: 4; 
+        }
+
+        * {
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <img id="logo" src="/photos/anthophrenor1.png" alt="Logo" ondragstart="return false;" />
+        <h1>Anthophrenor Alpha</h1>
+        <p class="warning">The fibrils root deep in every vertebrae, threading time's delicate veins. Past and present live as one in the mindspace.</p>
+        
+        <div id="button-container">
+            <button id="begin-button">Begin</button>
+            <button id="credits-button">Credits</button>
+            <button id="info-button">Specs</button>
+        </div>
+
+        <div id="credits-section" style="display: none;">
+            <p><b>Writing and Design</b>: Liv Duke</p>
+            <p><b>3D Models</b>: Polycam.com</p>
+            <p><b>Sound Design</b>: Pixabay.com</p>
+        </div>
+
+        <div id="info-section" style="display: none;">
+            <p><b>Devices</b>: Windows or Mac</p>
+            <p><b>Browsers</b>: Chrome or Edge</p>
+            <p><b>Screen Size</b>: 14 inches (minimum), 22 inches (maximum)</p>
+            <p><b>Resolution</b>: 1920x1080 (minimum), 1920x1200 (maximum)</p>
+            <p><b>Aspect Ratio</b>: 16:9</p>
+        </div>
+    </div>
+    
+    <div id="bottom-text">☉ Put your browser into full screen before you begin. Make sure audio autoplay is enabled in your browser settings. Headphones are recommended.</div>
+
+    <script type="module" src="/src/index.js"></script>
+</body>
+</html>

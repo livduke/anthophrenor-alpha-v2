@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthophrenor Alpha</title>
+    <style>
+        body { 
+            margin: 0; 
+            overflow: hidden;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        canvas { 
+            display: block; 
+        }
+        
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 1.5s ease;
+        }
+        
+        #loading-container {
+            position: relative;
+            width: 60%;
+            max-width: 600px;
+            margin: 0 auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .loading-image {
+            width: 50%;
+            height: auto;
+            object-fit: contain;
+            animation: pulse 3s infinite ease-in-out;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+        
+        #loading-text {
+            text-align: center;
+            text-shadow: 0px 0px 15px rgb(17, 13, 85, 1),
+            0px 0px 20px rgb(17, 13, 85, 1),
+            0px 0px 30px rgb(17, 13, 85, 1);
+            font-size: 18px; 
+            line-height: 1.5; 
+            max-width: 80%; 
+            margin: 20px auto; 
+        }
+        
+        #instructions {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            background: transparent;
+            padding: 5px 15px;
+            border-radius: 5px;
+            z-index: 4;
+        }
+
+        * {
+            user-select: none;
+        }
+    </style>
+  <script type="module" crossorigin src="../assets/mindspace-DSsRKax9.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/three.module-8Oc40bl9.js">
+</head>
+<body>
+    <div id="loading-screen">
+        <div id="loading-container">
+            <img src="../photos/loadingimage1.png" class="loading-image" alt="Loading" />
+            <div id="loading-text">A soft trembling seeps from the anthophrenor filament. The weight of flesh and bone diminishes as the eyes blacken in.</div>
+        </div>
+    </div>
+   
+    <div id="instructions">
+        ☉ The history of Scarlett's token split into two murky paths. What lies beyond here is unknown. Wisely choose where to wander first.
+    </div>
+    
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+                (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+            }
+        });
+
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            
+            function hideLoadingScreen() {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    
+                    const loadingCompleteEvent = new CustomEvent('loadingComplete');
+                    document.dispatchEvent(loadingCompleteEvent);
+                }, 1500);
+            }
+            
+            setTimeout(hideLoadingScreen, 12000); 
+        });
+    </script>
+</body>
+</html>
