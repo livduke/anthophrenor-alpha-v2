@@ -1,0 +1,758 @@
+{
+  "scenes": {
+    "MS1": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [0, 5, -10]
+      },
+      "room": {
+        "texture": "/photos/MSimages/MStexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/MS1whisper.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.1
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.1,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [
+        {
+          "path": "/models/MSmodels/MS1.glb",
+          "position": [0, 0.4, 0],
+          "scale": [8, 8, 8],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "path": "/models/MSmodels/MS1_2.glb",
+          "isMultiple": true,
+          "instances": [
+            {
+              "position": [5.5, 2.5, 9],
+              "rotation": [1.7959, 2.4166, 0],
+              "scale": [9, 9, 9],
+              "glitch": true
+            },
+            {
+              "position": [3, 1.5, 6],
+              "rotation": [1.8214, 3.0788, 0],
+              "scale": [9, 9, 9],
+              "glitch": true
+            },
+            {
+              "position": [7, 2.5, 12],
+              "rotation": [1.8518, 1.0472, 0],
+              "scale": [9, 9, 9],
+              "glitch": true
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "path": "/photos/MSimages/MS1.webp",
+          "wall": "right",
+          "position": [9.74, 6, 0],
+          "rotation": [0, -1.5708, 0],
+          "width": 15,
+          "height": 10,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "front",
+          "content": "<p><a href='#MS3'>Nobody</a> can hear us from <a href='#MS2'>here</a>, Scarlett.</p>"
+        }
+      ]
+    },
+    "MS2": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [0, 5, 10]
+      },
+      "room": {
+        "texture": "/photos/MSimages/MStexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/MS2.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.09
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.09,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [],
+      "images": [
+        {
+          "path": "/photos/MSimages/MS2.webp",
+          "wall": "back",
+          "position": [0, 6, 9.74],
+          "rotation": [0, 3.1416, 0],
+          "width": 12,
+          "height": 8,
+          "opacity": 0.5
+        },
+        {
+          "path": "/photos/listenbutton.png",
+          "wall": "left",
+          "position": [-9.74, 6, 0],
+          "rotation": [0, 1.5708, 0],
+          "width": 12,
+          "height": 8,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "right",
+          "content": "<p>He planned this breathtaking party. There's an endless pour of New Californian wine. Gilded trays glide by like little ships, carrying hors d'oeuvres. A couple of his friends, electric violinists from the Neomodern Orchestra, play hauntingly beautiful renditions of songs I only half-recognize, but feel like they're meant just for this special moment. I pull out the compact he gave me and touch up my lipstick. My stomach flutters. Maybe it's the wine. Maybe it's the way he looks at me. Maybe it's just the novelty of <a href='#MS3'>being seen</a>, actually seen, without dollar signs in anyone's eyes. For once, I feel like I belong.</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>..-..-..-..-..-..--..-..-..-..-..</p><p>..-..-..-..-..-..--..-..-..-..-..-..-..-..--..-..-..-..-..-..-..-..--..-..-..-..-..-..-..-..--..-..-..-..-..</p>"
+        },
+        {
+          "wall": "left",
+          "content": "<p>-..<a href='#' id='think-link'>THOUGHT</a>-.. ..-</p>",
+          "clickAudio": "/sound/milesvoicebite1.mp3"
+        }
+      ]
+    },
+    "MS3": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [0, 5, -10]
+      },
+      "room": {
+        "texture": "/photos/MSimages/MStexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/MS3.mp3",
+        "loop": true,
+        "volume": 1.0
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.08
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.08,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [],
+      "images": [],
+      "wallTexts": [
+        {
+          "wall": "front",
+          "content": "<p>▆er.-.,</p><p>You thought you could hide this from me. I saw the e▆▆▆▆ stowed in your cupboard.</p><p>The jewels and the pocket mirror. Then came the remnants of some fragrance in your apartment.</p><p>I suppose I should have expected this day would come. I just can't make sense of it.</p><p>Of her. Of you c▆osing her. After everything you told me - how you de▆▆d them, how</p><p>they fucked you over too, how you swore you'd get ▆▆ at them some▆, somehow. And now</p><p>you're ▆▆ h▆? I want to be angry. I should be. But I can't even ▆▆ my▆f. This is</p><p>exactly what I dese▆. But tell me this - when you look at her, do you feel anything real?</p><p>Have you lost your mind and convinced yourse▆ that you can rewrite the past?</p><p>Don't even bother trying to call me. F▆get me. Forget us.</p>"
+        },
+        {
+          "wall": "front",
+          "content": "<p>.. -- / .-.. --- ... .. -. --. / --- ..- - / --- -. / -.-- --- ..-</p><p>.. -- / .-.. --- ... . ..-</p><p>.. -- / .-.. --- ... .- / .-.. --- ... .- / .-.. --- ... . ..-</p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p>I meet many of his friends all toge▆▆\nthere was a girl there I forget her name\nshe told me she liked my hair\nshe seemed to have a gentle per▆▆lity that I liked\nhow do you kn▆ her\nI used to ▆▆ with her\nwhere did you two used to ▆▆\nshe lost her ▆▆ it's a long story\nwhere does she ▆▆ now\nhe didn't answer those questions and put his hand around my shoulder patt▆ it\nlike I said it's a lo▆ story\nI'm laying here in bed staring at the ceiling\n<a href='#MS4'>who is she</a>\nI can't shake the thoug▆ of ▆▆</p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p>.... . / -.- .. .-.. .-.. . -.. / .... . .-. / .- -. -.. / -.- .. .-.. .-.. . -.. / .-- .... .- - / .-- . / .... .- -.. / - --- --. . - .... . .-.</p>"
+        },
+        {
+          "wall": "left",
+          "content": "<p>.. -- / .-.. --- ... .. -. --. / --- ..- - / --- -. / -.-- --- ..-</p><p> the cicada's cry drills into the husk then silence </p><p> the cicada's cry drills into the hu▆ then ..- - / --- -. / -.-- - silence </p><p> the cicada's cry drills into the husk then sil▆▆ the cicada's cry drills into the husk then silence the cicada's cry then silence</p><p> the cicad▆▆ cry drills into the husk then silence </p><p> the cicada's ..- - / --- -. / -.-- - cry ..- - / --- -. / -.-- - dril▆ into the husk then silence </p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>.. -- / .-.. --- ... .. -. --. / --- ..- - / --- -. / -.-- --- ..-</p><p> such stillness the cries of the cicadas sink into the rocks into the rocks into the rocks into the rocks </p><p> such still▆▆ the cries of the cicadas sink into the rocks such stilln▆▆ the cries of the cicadas sink into the rocks </p><p> such stillness the cries of the cicad▆ ..- - / --- -. / -.-- - sink ..- - / --- -. / -.-- - into the rocks </p><p> such stillness the cries of the cicadas sink into the rocks </p><p> such stillness ..- - / --- -. / -.-- - the cries of the     she is a lotus blossoming in the <a href='#MS5'>sun</a>     cicadas sink into the rocks </p><p> such stillness the cries of the cicadas sink into the rocks such stillness..- - / --- -. / -.-- -  the cries of the cicad▆ sink into the rocks \nsuch stillness the cries of the cicadas sink into the rocks </p>"
+        }
+      ]
+    },
+    "MS4": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [10, 5, 0]
+      },
+      "room": {
+        "texture": "/photos/MSimages/MStexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/MS4.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.07
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.07,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [],
+      "images": [
+        {
+          "path": "/photos/MSimages/MS4.webp",
+          "wall": "right",
+          "position": [9.74, 6, 0],
+          "rotation": [0, -1.5708, 0],
+          "width": 15,
+          "height": 10,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "back",
+          "content": "<p>I ju▆ want my ▆▆▆ I want my ▆▆▆ I want my ▆▆▆ where is she\nit's really happeni▆ red everywhere red red red red red red there's no going back now some▆▆ in the corner of ▆ ▆▆\ncrack▆ ▆▆ the door it's not just ▆ and h▆ he▆ red I want to <a href='#MS5'>scream</a> to tell that per▆▆ to ▆▆ I'm losing my breath\neverything slow▆ I see visions of all that I once was sleeping upon my mother's shoulder haziness of youth\ngrowing pains sl▆▆ red everywhere a brig▆ light shines through my eyelids</p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p>. .-. / .- -. RED RED RED-. .-. / .- -. -. .-. / .- -. -. .-. / .- -. -. .-.  -. -. -. -. -. -. -. -. -. -. / .- -.</p><p>/ .- -. -. .-. / .- -. -. .-. / .- -                             / .- -./ .- -./ .- -./ .- -./ .- -. -. .-. -. .-. -. .-.</p><P> RED RED RED RED RED RED RED RED </p>"
+        }
+      ]
+    },
+    "MS5": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [10, 5, 0]
+      },
+      "room": {
+        "texture": "/photos/MSimages/MStexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/MS5.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.06
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.06,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [
+        {
+          "path": "/models/MSmodels/MS5.glb",
+          "position": [-6, 4, 0],
+          "scale": [4, 4, 4],
+          "rotation": [0, 6.5, 5],
+          "glitch": true
+        },
+        {
+          "path": "/models/MSmodels/MS5_3.glb",
+          "position": [-9, 2, -7.5],
+          "scale": [30, 30, 30],
+          "rotation": [0.7854, 0, 0],
+          "glitch": true
+        },
+        {
+          "path": "/models/MSmodels/MS5_4.glb",
+          "position": [-8, 3, 5],
+          "scale": [6, 6, 6],
+          "rotation": [0, 0, 3],
+          "glitch": true
+        }
+      ],
+      "images": [
+        {
+          "path": "/photos/MSimages/MS5.webp",
+          "wall": "right",
+          "position": [9.74, 5, 0],
+          "rotation": [0, -1.5708, 0],
+          "width": 8,
+          "height": 8,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "back",
+          "content": "<p>the space is filled with the sound of electrified strings stroked\nsomething is changing twitch▆ corners of a bleached smile tightly \ncollapsed manicu▆ hands an unblinking glassy ga▆ feet shifting in place\nthere is that girl that was so cordial but now she stands a little too clo▆\nI ask for her n▆▆ again and she says it's ▆▆▆▆ she makes small talk with \nme but then I cat▆ him in the corner of my eye he beckons me from the doorway \ndown a long hallway ▆▆ from everyone I go to him and he sh▆ the door quietly</p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p>.. / .-. . -.-. .- .-.. .-.. / -.-. . .-. - .- .. -. / -- --- -- . -. - ... \n--..-- / .-.. . - / ..- ... / -.-. .- .-.. .-.. / - .... . -- / .. -.-. . -... \n. .-. --. ... / .. -. / .--. .- .-. .- -.. .. ... . --..-- / .-- .... . -. / .- \n..-. - . .-. / .... .- ...- .. -. --. / .... .- -.. / -- -.-- / ..-. .. .-.. ..-.\n. / --- ..-. / .... . .-.</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>YOU WERE SLEEPING WITH A STRANGER ▆▆▆▆▆ERE SLEEPING WITH A STRANGER</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>-.-- --- ..- / .-- . .-. . /-.-- --- ..- / .-- . .-. . /</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>-.-- --- ..- / .-- . .-. . /-.-- --- ..- / .-- . .-. . /</p><p>-.-- --- ..- / .-- . .-. . /-.-- --- ..- / .-- . .-. . / YOU WERE SLEEPING WITH A STRANGER</p><p>YOU WERE SLEEPING ▆▆ A STRANGER</p><p>YOU WERE SLEEPING WITH A STRANGER</p>"
+        },
+        {
+          "wall": "left",
+          "content": "<p>▆▆▆,</p><p>I know what this loo▆ like. You don't understand yet. But you will. I haven't gone insane\nand I'm certainly not trying to rewrite the ▆▆. I'm writing the future, ▆▆ fut▆e. Don't tell\nme any of that nonse▆▆. It's impossi▆ for me to f▆get you or what we share with each other.\nThat guilt you've been shouldering is something I know has caused you nothi▆ but pain and I\nwish to take it away. But I have to ask that you just wa▆▆ a little bit l▆ger for me. Getting\nclose to her has go▆en ▆ in. From here, I can do what I nev▆ could have done when I was nobody\nto ▆▆. Soon, you'll see <a href='#MS6'>what I mean</a>. For now, revert all your a▆ect▆ns back to ▆▆.\nPlay your part with ▆▆, just like I am with h▆.</p><p>We will reunite, I promi▆. You know I never ▆ back on my word.</p><p>I love you.</p><p>P▆▆</p>"
+        }
+      ]
+    },
+    "MS6": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [-10, 5, 0]
+      },
+      "room": {
+        "texture": "/photos/MSimages/MStexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/MS6.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.05
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.05,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [
+        {
+          "path": "/models/MSmodels/MS6.glb",
+          "position": [0, 0.20, -10],
+          "scale": [5, 5, 5],
+          "rotation": [0, 0, 0]
+        }
+      ],
+      "images": [
+        {
+          "path": "/photos/endbutton.png",
+          "wall": "back",
+          "position": [0, 5, 9.74],
+          "rotation": [0, 3.1416, 0],
+          "width": 10,
+          "height": 10,
+          "opacity": 0.5
+        },
+        {
+          "path": "/photos/MSimages/MS6.webp",
+          "wall": "left",
+          "position": [-9.74, 6, 0],
+          "rotation": [0, 1.5708, 0],
+          "width": 15,
+          "height": 10,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "front",
+          "content": "<p>I waited till the dr▆kards had flo▆▆ out of my place, stumbling off into the\ndark streets. Their memories are f▆tered with black spots from the d▆▆ wine \nthey were so excit▆ to sip.\n</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>G▆ on the move fa▆. \n▆▆▆ shou▆ be done with it?\n▆▆ light a fi▆ and ▆rn it ▆▆ dust.\nA ▆▆ of ▆drofl▆ic ac▆ can me▆ it all aw▆.\nDisapp▆r?\nI can't hi▆ what's been ▆▆.\nI don't want to.\nI'm going to sh▆ it and ▆▆▆ his wor▆▆ crumble to p▆ces. \n</p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p><a href='#MSending'>WAKE UP</a></p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p>.-- .- -.- . / ..-</p>"
+        }
+      ]
+    },
+    "SE1": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [10, 5, 0]
+      },
+      "room": {
+        "texture": "/photos/SEimages/SEtexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/SE1.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.1
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.1,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [
+        {
+          "path": "/models/SEmodels/SE1_3.glb",
+          "position": [7, 8, -6],
+          "scale": [3, 3, 3],
+          "rotation": [0, -0.3927, 0]
+        }
+      ],
+      "images": [],
+      "wallTexts": [
+        {
+          "wall": "front",
+          "content": "<p>On the corner of South Pine and China Street is where it is. I <a href='#SE3'>remember</a> it well. \nVelvet wine-colored trays lined with silver, gold, and pearls glint behind smudged \nglass. When I push the door open, the bell clanks sharply and a surge of sweltering \nsummer air collides with the freezing blast of the air con. It smells faintly \nof rubbing alcohol and lavender. That red-headed woman behind the counter is there again \nand raises her eyebrows when she looks up from her book and sees me.</p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p>I picked up on how she's an eclectic collector, timesick for old world charm. \nShe's someone who keeps a heap of moth-eaten retro books surrounded by her newest \nDenkirhiza gadgets. I've showered her with gifts from around town. This time, though, \nI'm getting her something special - a compact mirror with one of my drawings engraved \non it. I pull the sketch from my pocket, unfold it, and slide it over to the red-headed \nwoman. The image sends a <a href='#SE2'>shiver</a> down my spine \nif I linger on it too long.</p>"
+        }
+      ]
+    },
+    "SE2": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [10, 5, 0]
+      },
+      "room": {
+        "texture": "/photos/SEimages/SEtexture.png",
+        "size": 20,
+        "height": 20,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/SE2.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.08
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.08,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [],
+      "images": [
+        {
+          "path": "/photos/SEimages/SE2.webp",
+          "wall": "back",
+          "position": [0, 8, 9.74],
+          "rotation": [0.06, 3.1416, 0],
+          "width": 6.4,
+          "height": 8,
+          "opacity": 0.5
+        },
+        {
+          "path": "/photos/SEimages/SE2_2.webp",
+          "wall": "right",
+          "position": [9.74, 5, 0],
+          "rotation": [0, -1.5708, 0],
+          "width": 5.6,
+          "height": 7,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "front",
+          "content": "<p>I've had enough of watching that thief Adrian grow wealthier and weal▆▆▆▆ off of my ▆▆▆▆.\nHe has lost his wits in his old age and learning that had filled me with glee, but now there's \nrumors that a clueless brat is next in line to take over the compa▆▆. The towers \ndowntown, erected so quickly by my ▆▆▆▆, cast inescapable shadows over me in the streets.\nI can't be idle any longer. What I will not do is run arou▆▆ and tattle to the industry like \nsome petulant child. They'll only write me off as cra▆▆ or fueled by jealousy. Instead, I will \n▆▆▆▆ back in a way that is so un▆▆thomable no one would see it coming. Whatev▆▆ that may be, I \nwill make sure it ▆▆▆▆ him greatly.</p>"
+        },
+        {
+          "wall": "front",
+          "content": "<p>-.--.-.- -.--.-.--.---.--.--.-    .--.---.-.-      -.--.---.-.-..--.-    ...-.--.- -.-\n-.---.-.-...-.-</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>Craftsworms™ are a type of bioengineered silkworm designed to revolutionize\narchitectural fabrication through biomimetic construction techni▆▆▆.\nThese organisms have been genetically modified to produce building materials\nwith programmable ▆▆▆▆▆▆▆▆ patterns, enabling their application in large-scale\nurban infrastructure projects.</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>-.--.-.-</p><p>                  -.--.-.--.---.-.</p><p>  -.--.- -.--.-.--.---.-.-..-.</p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p>I have had a reasonable ▆▆▆▆▆▆ of success that is beyond what most will ever see in this city. I could easily disappear \ninto a life of leisure. But that would be so pitiful after all the hard work I've put forward. I am unab▆▆ to forget and \nforgive his <a href='#SE4'>betrayal</a>. It has me sick that another Scalius will benefit from ▆▆▆▆ is truly mine.</p>"
+        },
+        {
+          "wall": "back",
+          "content": "<p>-.--.-.- -.--.-.--.---.--.--.- -.--.-.--.---.-.-...-.--.- -.--.-.--.---.-.-..--.---.-.-...-.--.- -.-\n-.---.-.-...-.--.- -.--.---.-.-...-.--.- -.-</p>"
+        }
+      ]
+    },
+    "SE3": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [0, 5, 10]
+      },
+      "room": {
+        "texture": "/photos/SEimages/SEtexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/SE3.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.05
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.05,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [],
+      "images": [
+        {
+          "path": "/photos/SEimages/SE4.webp",
+          "wall": "back",
+          "position": [0, 6, 9.74],
+          "rotation": [0, 3.1416, 0],
+          "width": 5,
+          "height": 8,
+          "opacity": 0.5
+        },
+        {
+          "path": "/photos/SEimages/SE3.webp",
+          "wall": "left",
+          "position": [-9.74, 6, 0],
+          "rotation": [0, 1.5708, 0],
+          "width": 12,
+          "height": 10,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "right",
+          "content": "<p>now he's come up here with a suit looking very different his eyes and teeth \nare clear he ain't on the chem anymore good for him I guess he puts this silver \ncompact mirror on the counter I need a custom engraving for <a href='#SE5'>my girlfriend</a> oh so \nyou're going steady with her now this is the same girl I am assuming he nods she's\nmine now he doesn't laugh he doesn't even crack a smile</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>-.. --- / -. --- - / - ..- .-. -. / - --- / -- . -.. .. ..- -- ... / --- .-. / \n-. . -.-. .-. --- -- .- -. -.-. . .-. ... / -.. --- / -. --- - / ... . . -.- / - .... \n. -- / --- ..- - / .- -. -.. / ... --- / -- .- -.- . / -.-- --- ..- .-. ... . .-.. ...\n- . ... / ..- -. -.-. .-.. . .- -. / -... -.-- / - .... . --</p>"
+        },
+        {
+          "wall": "front",
+          "content": "<p>he stumbles in here wearing an oversized jacket and it's got me fucking frightened \nwho knows he could be hauling some heavy metal under there he reaches his hand inside\nthe jacket and I grip my neckbiter under the counter ready to fling it across the room \nand slice him open but ▆▆▆▆ he pulls out a wad of cash he wants some jewelry for a girl \nfor all I know he could be making that up he will probably take it to some side street \nand resell it for twice the amount for a gr▆▆ of spitrock I don't give a shit as long \nas I'm making my money to my surprise he picks out the nicest charms and gems this ain't \ncheap you've got good taste there's lots of guys who come in here and pick the tackiest \nthings he says she has impeccable taste and she only dese▆▆▆▆ <a href='#SE4'>the best</a> he laughs and then \nhe just keeps laughing he does ▆▆ a little too hard his cheeks begin to turn red it goes \non for way t▆▆ long what▆▆er you chemhead</p>"
+        },
+        {
+          "wall": "front",
+          "content": "<p>--- / .-- . .- .-- .- .--. --- -. / \n..-. --- .-. -- . -.. / .- --. .- .. -. ... - \n/ -- . / ... .... .- .-.. .-.. / .--. .-. --- \n... .--. . .-. .- -. -.. / . ...- . .-. -.-- / - --- \n-. --. ..- . / .-- .... .. -.-. .... / .-. .. ... . ... \n/ .- --. .- .. -. ... - / -.-- --- ..- / .. -. / .--- \n..- -.. --. -- . -. - / -.-- --- ..- / ... .... .- .-.. \n.-.. / -.-. --- -. -.. . -- -. - .... .. ... / .. ... / \n- .... . / .... . .-. .. - .- --. . / --- ..-. / - .... \n. / ... . .-. ...- .- -. - ... / --- ..-. / - .... . / \n.-.. --- .-. -.. --..-- / .- -. -.. / - .... . .. .-. \n/ .-. .. --. .... - . --- ..- ... -. . ... ... / .. ...\n / ..-. .-. --- -- / -- .</p>"
+        }
+      ]
+    },
+    "SE4": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [0, 5, -10]
+      },
+      "room": {
+        "texture": "/photos/SEimages/SEtexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/SE4.mp3",
+        "loop": true,
+        "volume": 0.5
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.04
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.04,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [
+        {
+          "path": "/models/SEmodels/SE5.glb",
+          "position": [8, 1.8, -1],
+          "scale": [5, 5, 5],
+          "rotation": [0, 1.2566, 0]
+        },
+        {
+          "path": "/models/SEmodels/SE4_2.glb",
+          "position": [-4, 2.5, -8],
+          "scale": [3.5, 3.5, 3.5],
+          "rotation": [0, 0, 0],
+          "glitch": true
+        }
+      ],
+      "images": [
+        {
+          "path": "/photos/SEimages/SE5.webp",
+          "wall": "front",
+          "position": [0, 6, -9.74],
+          "rotation": [0, 0, 0],
+          "width": 10,
+          "height": 10,
+          "opacity": 0.5
+        },
+        {
+          "path": "/photos/listenbutton.png",
+          "wall": "left",
+          "position": [-9.74, 6, 0],
+          "rotation": [0, 1.5708, 0],
+          "width": 12,
+          "height": 8,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "right",
+          "content": "<p>She's not easily <a href='#SE5'>impressed</a>. But when she sees\nme, there's a twinkle in her eye. I have a charm that the dull suits\nand 'rhiza engineers twice her age, all desperate for her attention,\ncompletely lack. Surely, with time, she'll start to open up and embrace me.</p>"
+        },
+        {
+          "wall": "left",
+          "content": "<p>-..<a href='#' id='think-link'>THOUGHT</a>-.. ..-</p>",
+          "clickAudio": "/sound/milesvoicebite2.mp3"
+        }
+      ]
+    },
+    "SE5": {
+      "camera": {
+        "position": [0, 5, 0],
+        "lookAt": [0, 5, 10]
+      },
+      "room": {
+        "texture": "/photos/SEimages/SEtexture.png",
+        "size": 20,
+        "height": 18,
+        "wallThickness": 0.5,
+        "defaultColor": "0x00008B"
+      },
+      "audio": {
+        "path": "/sound/SE5.mp3",
+        "loop": true,
+        "volume": 0.2
+      },
+      "lighting": {
+        "ambient": {
+          "color": "0xffffff",
+          "intensity": 0.03
+        },
+        "directional": {
+          "color": "0xffffff",
+          "intensity": 0.03,
+          "position": [0, 15, 0]
+        }
+      },
+      "models": [],
+      "images": [
+        {
+          "path": "/photos/SEimages/SE8.png",
+          "wall": "back",
+          "position": [0, 6, 9.74],
+          "rotation": [0, 3.1416, 0],
+          "width": 15,
+          "height": 10,
+          "opacity": 0.5
+        },
+        {
+          "path": "/photos/endbutton.png",
+          "wall": "right",
+          "position": [9.74, 6.67, -3],
+          "rotation": [0, -1.5708, 0],
+          "width": 13,
+          "height": 13,
+          "opacity": 0.5
+        }
+      ],
+      "wallTexts": [
+        {
+          "wall": "left",
+          "content": "<p>There's this notion that revenge is never worth it. I tend to agree, \nbut only if you've been wronged in a rather mild manner. And clearly I \nhaven't been. I need to go beyond revenge. Revenge is a blow whose pain \neventually fades. I want justice. And in these wild times, justice has \nthe taste of spilled <a href='#MS1'>blood</a>.</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p><a href='#SEending'>WAKE UP</a>AW ꟼU</p>"
+        },
+        {
+          "wall": "right",
+          "content": "<p>- .... . -. / - .... . / -.. ..- ... - / \n.-- .. .-.. .-.. / .-. . - ..- .-. -.</p>"
+        },
+        {
+          "wall": "front",
+          "content": "<p>the reeds whispered bittersweet songs</p><p>and secrets that would become too hard to keep</p><p>too hard to keep</P><p>hard to keep</P><p>to keep</P>"
+        },
+        {
+          "wall": "front",
+          "content": "<p></p><p></p><p></p><p>.-.   . - .-. . - </p><p>.-. .   - </p>"
+        }
+      ]
+    }
+  }
+}
