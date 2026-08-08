@@ -1,0 +1,33 @@
+name: Deploy to itch.io
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+      - run: npm run build
+
+      # Setup required before this step will work:
+      #   1. Generate an API key at itch.io/user/settings/api-keys
+      #   2. Add it as a repo secret named BUTLER_API_KEY
+      #      (Settings -> Secrets and variables -> Actions)
+      #   3. Replace ITCH_USER / ITCH_GAME below with your real
+      #      itch.io username and project slug.
+      - name: Publish to itch.io
+        uses: manleydev/butler-publish-itchio-action@v1
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
+          CHANNEL: html5
+          ITCH_GAME: anthophrenors # TODO: replace with your itch.io project slug
+          ITCH_USER: your-itch-username # TODO: replace with your itch.io username
+          PACKAGE: dist
