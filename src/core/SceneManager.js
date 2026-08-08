@@ -32,6 +32,7 @@ export class SceneManager {
   start() {
     this.titleScreen.show(() => {
       this.titleScreen.hide();
+      this.inputController.enable();
       this.inputController.requestLock();
       this.load('scene_threshold');
     });
@@ -61,24 +62,37 @@ export class SceneManager {
     this.transitionController.play(worldPos, {
       skipHeld: () => this.inputController.skipHeld,
       onArrive: () => this.load(leadsTo),
+      isEnding: sceneTree[leadsTo]?.type === 'ending',
     });
   }
 
   _playEnding(config) {
     this.sceneRenderer.dispose();
     this.inputController.setClickTargets([]);
+    this.inputController.releaseLock();
+    // Disable (not dispose) — the ending has no more room interactions, and
+    // a stray click on the canvas behind the ending-screen box would
+    // otherwise re-request pointer lock and bring the crosshair back. Kept
+    // alive (vs. dispose) so Return to Menu can re-enable it for a replay.
+    this.inputController.disable();
     this.transitionController.holdVoid();
     const audioCue = new AudioCue(config.audio, { fallbackDuration: 4 });
-    this.endingScreen.show(config.endingText, audioCue);
+    this.endingScreen.show(config.endingText, audioCue, () => this._returnToMenu());
+  }
+
+  _returnToMenu() {
+    this.endingScreen.hide();
+    this.transitionController.reset();
+    this.start();
   }
 
   update(delta) {
     this.inputController.update(delta);
     this.transitionController.update(delta);
+    this.postFX.update(delta);
 
     if (!this.transitionController.isActive) {
-      this.sceneRenderer.update(delta, this.camera);
-      this.calloutBox.update(this.camera, this.renderer);
+      this.sceneRenderer.update(delta);
     }
   }
 
@@ -88,5 +102,9 @@ export class SceneManager {
     } else {
       this.postFX.render();
     }
+  }
+
+  setSize(width, height) {
+    this.transitionController.setSize(width, height);
   }
 }

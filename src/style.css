@@ -11,7 +11,7 @@
   text-align: center;
   color: #ffffff;
   z-index: 20;
-  cursor: pointer;
+  cursor: default;
   user-select: none;
 }
 
@@ -22,40 +22,91 @@
   margin: 0 0 1.5rem 0;
 }
 
-.title-screen .prompt {
+.start-button {
+  font-family: inherit;
   font-size: 1rem;
-  opacity: 0.8;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  padding: 10px 32px;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  background: #ffffff;
+  color: #0000ff;
+}
+
+.return-button {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.ending-screen,
+.callout-box {
+  text-shadow:
+    0 0 6px rgba(0, 0, 255, 0.95),
+    0 0 16px rgba(0, 0, 255, 0.9),
+    0 0 32px rgba(0, 0, 255, 0.85);
 }
 
 .ending-screen {
   cursor: default;
   font-size: 1.3rem;
-  max-width: 60vw;
+  line-height: 1.6;
+  max-width: 480px;
 }
 
 .callout-box {
   position: relative;
-  border: 1px solid #ffffff;
-  background: #0a1a4a;
   color: #ffffff;
-  padding: 10px 14px;
   font-size: 0.85rem;
   max-width: 220px;
   line-height: 1.4;
   white-space: pre-wrap;
 }
 
-.ambient-text {
+#crosshair {
   position: fixed;
-  color: rgba(159, 211, 255, 0.5);
-  font-size: 0.75rem;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 4;
-  animation: ambientDrift 6s ease-in-out infinite;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.15s ease;
 }
 
-@keyframes ambientDrift {
-  0% { opacity: 0; transform: translateY(0); }
-  50% { opacity: 0.6; }
-  100% { opacity: 0; transform: translateY(-20px); }
+#crosshair.visible {
+  opacity: 0.55;
+}
+
+#crosshair::before,
+#crosshair::after {
+  content: '';
+  position: absolute;
+  background: #ffffff;
+}
+
+#crosshair::before {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+#crosshair::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
 }

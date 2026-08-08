@@ -24,7 +24,11 @@ const ScanlineShiftShader = {
     varying vec2 vUv;
     void main() {
       float band = mod(gl_FragCoord.y, 6.0) < 3.0 ? 1.0 : -1.0;
-      float shift = sin(vUv.y * 80.0 + uTime * 6.0) * uIntensity * 0.02 * band;
+      // Squared so idle intensity (~0.05) shifts by a fraction of a pixel
+      // (was ~1-2.5px, enough to break thin/thick geometry like the room
+      // wireframe into dashes) while high-intensity moments (transitions,
+      // click-flash) keep their full dramatic tear.
+      float shift = sin(vUv.y * 80.0 + uTime * 6.0) * uIntensity * uIntensity * 0.02 * band;
       vec2 uv = vec2(vUv.x + shift, vUv.y);
       gl_FragColor = texture2D(tDiffuse, uv);
     }
@@ -94,9 +98,6 @@ const GlitchWipeShader = {
 
       vec2 tearOffset = vec2(sin(uTime * 40.0) * 0.05, cos(uTime * 33.0) * 0.03) * shard * uWipeProgress;
       vec3 color = texture2D(tDiffuse, uv + tearOffset).rgb;
-
-      vec3 flash = vec3(1.0) * shard * uWipeProgress * 0.6;
-      color = mix(color, vec3(1.0) - color, shard * uWipeProgress * 0.4) + flash * 0.2;
 
       gl_FragColor = vec4(color, 1.0);
     }

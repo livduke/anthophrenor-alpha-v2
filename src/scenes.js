@@ -10,8 +10,7 @@ export const sceneTree = {
 
   scene_threshold: {
     id: 'scene_threshold',
-    room: { seed: 12, size: [10, 4, 10] },
-    ambientText: null,
+    room: { seed: 12, size: [8, 8, 8] },
     objects: [
       {
         id: 'obj_phone',
@@ -34,8 +33,7 @@ export const sceneTree = {
 
   scene_garden: {
     id: 'scene_garden',
-    room: { seed: 7, size: [8, 4, 8] },
-    ambientText: ['ERR_MEMORY_ROOT', 'bloom.exe has stopped responding'],
+    room: { seed: 7, size: [8, 8, 8] },
     objects: [
       {
         id: 'obj_mug',
@@ -50,8 +48,7 @@ export const sceneTree = {
 
   scene_attic: {
     id: 'scene_attic',
-    room: { seed: 21, size: [8, 4, 8] },
-    ambientText: null,
+    room: { seed: 21, size: [8, 8, 8] },
     objects: [
       {
         id: 'obj_box',

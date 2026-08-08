@@ -1,5 +1,6 @@
-// Minimal title screen: "The Anthophrenors" + a click/press-to-start
-// prompt. Courier New, no imagery, no tagline, per spec.
+// Minimal title screen: "Anthophrenor α" + a Start button. Left-click on
+// the button is the only way in — no keyboard fallback. Courier New, no
+// imagery, no tagline, per spec.
 export class TitleScreen {
   constructor(container) {
     this.container = container;
@@ -10,18 +11,21 @@ export class TitleScreen {
     this.el = document.createElement('div');
     this.el.className = 'title-screen';
     this.el.innerHTML = `
-      <h1>The Anthophrenors</h1>
-      <p class="prompt">click / press any key to start</p>
+      <h1>Anthophrenor α</h1>
+      <button type="button" class="start-button">Start</button>
     `;
     this.container.appendChild(this.el);
 
-    const start = () => {
-      document.removeEventListener('keydown', start);
-      this.el?.removeEventListener('click', start);
+    const startButton = this.el.querySelector('.start-button');
+    // Explicit left-button-only check — don't use {once:true}, since that
+    // would remove the listener on the first click regardless of button,
+    // silently disabling Start after a stray right/middle click.
+    const onClick = (e) => {
+      if (e.button !== 0) return;
+      startButton.removeEventListener('click', onClick);
       onStart();
     };
-    document.addEventListener('keydown', start, { once: true });
-    this.el.addEventListener('click', start, { once: true });
+    startButton.addEventListener('click', onClick);
   }
 
   hide() {

@@ -17,6 +17,10 @@ export class InputController {
     this.bounds = null;
     this.clickTargets = [];
     this._onObjectClick = null;
+    // Gates click-to-(re)lock: false until the title screen's Start flow
+    // runs, so a stray click on the canvas behind the title/ending UI can't
+    // pointer-lock (and pop the crosshair) outside of actual gameplay.
+    this._enabled = false;
 
     this._raycaster = new THREE.Raycaster();
     this._center = new THREE.Vector2(0, 0);
@@ -32,6 +36,18 @@ export class InputController {
 
   requestLock() {
     this.controls.lock();
+  }
+
+  enable() {
+    this._enabled = true;
+  }
+
+  disable() {
+    this._enabled = false;
+  }
+
+  releaseLock() {
+    this.controls.unlock();
   }
 
   get isLocked() {
@@ -71,7 +87,9 @@ export class InputController {
     }
   }
 
-  _onClick() {
+  _onClick(e) {
+    if (e.button !== 0) return;
+    if (!this._enabled) return;
     if (!this.controls.isLocked) {
       this.requestLock();
       return;

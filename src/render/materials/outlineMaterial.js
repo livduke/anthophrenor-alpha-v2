@@ -40,8 +40,13 @@ export function createObjectMaterial({
       void main() {
         float fresnel = pow(1.0 - clamp(dot(normalize(vViewDir), normalize(vNormal)), 0.0, 1.0), uFresnelPower);
         float pulse = 0.85 + 0.15 * sin(uTime * 3.0);
-        vec3 color = mix(uBaseColor, uOutlineColor, fresnel * pulse);
-        gl_FragColor = vec4(ditherQuantize(color, gl_FragCoord.xy, 6.0), 1.0);
+        float t = clamp(fresnel * pulse, 0.0, 1.0);
+        // Dither the blend factor (not each RGB channel independently) so
+        // the result always sits on the base->outline line instead of
+        // drifting into stray hues as channels quantize at different rates.
+        float ditheredT = ditherQuantize(vec3(t), gl_FragCoord.xy, 6.0).x;
+        vec3 color = mix(uBaseColor, uOutlineColor, ditheredT);
+        gl_FragColor = vec4(color, 1.0);
       }
     `,
   });

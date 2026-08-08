@@ -9,6 +9,7 @@ import { SceneManager } from './core/SceneManager.js';
 import './style.css';
 
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0000ff);
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
 
 const renderer = new THREE.WebGLRenderer({ antialias: false });
@@ -41,12 +42,19 @@ const sceneManager = new SceneManager({
 
 sceneManager.start();
 
+const crosshairEl = document.getElementById('crosshair');
+document.addEventListener('pointerlockchange', () => {
+  const locked = document.pointerLockElement === renderer.domElement;
+  crosshairEl.classList.toggle('visible', locked);
+});
+
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
   css2dRenderer.setSize(window.innerWidth, window.innerHeight);
   postFX.setSize(window.innerWidth, window.innerHeight);
+  sceneManager.setSize(window.innerWidth, window.innerHeight);
 });
 
 const clock = new THREE.Clock();
